@@ -33,7 +33,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>셰션 생성</string>
    </property>
   </widget>
  </widget>
