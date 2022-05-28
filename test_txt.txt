@@ -1,0 +1,15 @@
+self.LineEdit이름.text()
+
+https://discord.gg/4maw3sap
+https://discord.com/channels/912314917393154128/912314921004433439
+//*[@id="message-reactions-951134205407019090"]/div[1]/div/div
+https://discord.com/channels/912314917393154128/964159813116387378
+//*[@id="message-reactions-979715676505788466"]/div[1]/div/div
+
+
+
+https://discord.gg/rX9sgxsj
+https://discord.com/channels/938378387972567080/938927837866500116
+//*[@id="message-reactions-972336264030355466"]/div[1]/div/div
+https://discord.com/channels/938378387972567080/938932354746056706
+//*[@id="message-reactions-979260647822987354"]/div[1]/div/div
