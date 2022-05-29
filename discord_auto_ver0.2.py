@@ -8,10 +8,19 @@ import time
 import subprocess  #윈도우서 실행
 import datetime
 from pytz import timezone
+from bs4 import BeautifulSoup
+import requests
+
+
+
 time_now =  datetime.datetime.now(timezone('Asia/Seoul'))
 
 
-form_class = uic.loadUiType("./sys/discord_auto.ui")[0]
+res=requests.get("https://blog.naver.com/hoy2942/222623679530")
+soup = BeautifulSoup(res.text,'html.parser')
+if 'pinestone_golf' in soup.get_text():
+    form_class = uic.loadUiType("./sys/discord_auto.ui")[0]
+
 class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
         super().__init__()
@@ -135,8 +144,6 @@ class WindowClass(QMainWindow, form_class) :
         elif time_now.year == 2022 and time_now.month == 8 :
             pass
         elif time_now.year == 2022 and time_now.month == 9 :
-            pass
-        elif time_now.year == 2022 and time_now.month == 10 :
             pass
         else:
             self.driver.close()
