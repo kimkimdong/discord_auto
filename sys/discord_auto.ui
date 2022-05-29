@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>582</width>
-    <height>292</height>
+    <width>723</width>
+    <height>287</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,20 +17,37 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>250</y>
-     <width>391</width>
-     <height>22</height>
+     <y>231</y>
+     <width>531</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="maxVisibleItems">
+    <number>30</number>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>250</y>
-     <width>93</width>
-     <height>28</height>
+     <x>562</x>
+     <y>237</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>셰션 생성</string>
@@ -52,11 +69,19 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>40</y>
-     <width>131</width>
-     <height>28</height>
+     <x>520</x>
+     <y>60</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>작업시작</string>
@@ -117,20 +142,26 @@
   <widget class="QComboBox" name="comboBox_2">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>520</x>
      <y>10</y>
-     <width>131</width>
-     <height>22</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <item>
     <property name="text">
-     <string>전송버튼 없음</string>
+     <string>전송버튼 있음</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>전송버튼 있음</string>
+     <string>전송버튼 없음</string>
     </property>
    </item>
   </widget>

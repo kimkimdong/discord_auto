@@ -30,7 +30,7 @@ class WindowClass(QMainWindow, form_class) :
         with open('./sys/id_lists.txt','r',encoding='utf-8') as f:  #id 가지고 오기/
             ids = f.read().splitlines() 
             
-        if self.comboBox_2.currentIndex() ==0:
+        if self.comboBox_2.currentIndex() == 1:
             for i in ids[:50]:
                 self.open_chrome(i)
                 if self.driver.current_url == 'https://discord.com/channels/@me':
@@ -54,7 +54,7 @@ class WindowClass(QMainWindow, form_class) :
                         
                 else :
                     self.driver.close()
-        elif self.comboBox_2.currentIndex() == 1 :
+        elif self.comboBox_2.currentIndex() == 0 :
             for i in ids[:50]:
                 self.open_chrome(i)
                 if self.driver.current_url == 'https://discord.com/channels/@me':
