@@ -21,17 +21,17 @@ except:
     driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver.exe', options=option)
 driver.set_window_size(1400,900)
 driver.implicitly_wait(15)
-driver.get('https://discord.com/channels/912314917393154128/974523774412161034')
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-time.sleep(1)
-ActionChains(driver).send_keys(Keys.PAGE_DOWN).perform()
-print(driver.page_source)
+driver.get('https://discord.com/invite/camochameleonclub')
+# marginTop40-Q4o1tS button-1cRKG6 button-f2h6uQ lookFilled-yCfaCM colorBrand-I6CyqQ sizeLarge-3mScP9 fullWidth-fJIsjq grow-2sR_-F
+# marginTop40-Q4o1tS button-1cRKG6 button-f2h6uQ lookFilled-yCfaCM colorBrand-I6CyqQ sizeLarge-3mScP9 fullWidth-fJIsjq grow-2sR_-F
+time.sleep(2)
+# driver.find_element_by_css_selector('button.marginTop?40-Q4o1tS.button-1cRKG6.button-f2h6uQ.lookFilled-yCfaCM.colorBrand-I6CyqQ.sizeLarge-3mScP9.fullWidth-fJIsjq.grow-2sR_-F')
+
+while True:
+    try:
+        body = driver.find_element_by_css_selector('body')
+    except:
+        driver.refresh()
+        time.sleep(1)
+        
+driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div/div/div/section/div/button')

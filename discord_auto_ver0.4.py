@@ -86,104 +86,84 @@ class WindowClass(QMainWindow, form_class) :
     def server_join(self):
         # if len(self.lineEdit_4.text()) != 0:
         #     if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
+        self.driver.implicitly_wait(10)
         if self.comboBox_2.currentIndex() == 0:
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
+            #                                 # //*[@id="app-mount"]/div[2]/div/div/div/div/section/div/button
+            # self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.ENTER).perform()
+            time.sleep(self.spinBox_2.value())
             self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div[1]/div/div[1]/button').click() # 완료버튼
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div[3]/div/label/input').click() #규칙을 읽었으면~~
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[2]/button').click() # 전송버튼
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
         elif self.comboBox_2.currentIndex() == 1:
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.ENTER).perform()
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
     def server_join_2(self):
         # if len(self.lineEdit_4.text()) != 0:
         #     if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
+        self.driver.implicitly_wait(10)
         if self.comboBox_2.currentIndex() == 0:
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.ENTER).perform()
+            time.sleep(self.spinBox_2.value())
             if len(self.lineEdit_4.text()) != 0:
                 if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
                     self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div[1]/div/div[1]/button').click() # 완료버튼
-                    time.sleep(3)
+                    time.sleep(self.spinBox_2.value())
                     self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div[3]/div/label/input').click() #규칙을 읽었으면~~
-                    time.sleep(3)
+                    time.sleep(self.spinBox_2.value())
                     self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[2]/button').click() # 전송버튼
+                    time.sleep(self.spinBox_2.value())
                     self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-                    time.sleep(3)
+                    time.sleep(self.spinBox_2.value())
                     self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-                    time.sleep(3)
+                    time.sleep(self.spinBox_2.value())
         elif self.comboBox_2.currentIndex() == 1:
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
             self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
+            time.sleep(self.spinBox_2.value())
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
+            ActionChains(self.driver).send_keys(Keys.ENTER).perform()
+            time.sleep(self.spinBox_2.value())
             if len(self.lineEdit_4.text()) != 0:
                 if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
                     self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-                    time.sleep(3)
+                    time.sleep(self.spinBox_2.value())
                     self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-                    time.sleep(3)
-    def server_join(self):
-        # if len(self.lineEdit_4.text()) != 0:
-        #     if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
-        if self.comboBox_2.currentIndex() == 0:
-            time.sleep(3)
-            self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
-            if len(self.lineEdit_4.text()) != 0:
-                if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
-                    self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div[1]/div/div[1]/button').click() # 완료버튼
-                    time.sleep(3)
-                    self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[1]/div[1]/div/div/div/div[3]/div/label/input').click() #규칙을 읽었으면~~
-                    time.sleep(3)
-                    self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[4]/div[2]/div/div/div[2]/div[2]/button').click() # 전송버튼
-                    self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-                    time.sleep(3)
-                    self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-                    time.sleep(3)
-        elif self.comboBox_2.currentIndex() == 1:
-            time.sleep(3)
-            self.driver.get(self.lineEdit.text())  #라인에디터1 삽입 초대장
-            time.sleep(3)
-            self.driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/section/div/button/div').click()
-            time.sleep(3)
-            if len(self.lineEdit_4.text()) != 0:
-                if self.lineEdit_4.text().split('/')[5][:18] not in self.driver.page_source:
-                    self.driver.get(self.lineEdit_2.text())  #라인에디터2 서버가입주소
-                    time.sleep(3)
-                    self.driver.find_element_by_xpath(self.lineEdit_3.text()).click()  #라인에디터3 서버가입 클릭
-                    time.sleep(3)
-                #     else:
-        #         pass
-        # else:
-        #     pass
+                    time.sleep(self.spinBox_2.value())
+
 
     def event_join(self):
-        time.sleep(3)
+        self.driver.implicitly_wait(10)
+        time.sleep(self.spinBox_2.value())
         self.driver.get(self.lineEdit_4.text())  #라인에디터4 이벤트 주소
-        time.sleep(3)
+        time.sleep(self.spinBox_2.value())
         ActionChains(self.driver).send_keys(Keys.PAGE_DOWN).perform()
         time.sleep(1)
         ActionChains(self.driver).send_keys(Keys.PAGE_DOWN).perform()
@@ -195,9 +175,9 @@ class WindowClass(QMainWindow, form_class) :
         ActionChains(self.driver).send_keys(Keys.PAGE_DOWN).perform()
         time.sleep(1)
         ActionChains(self.driver).send_keys(Keys.PAGE_DOWN).perform()
-        time.sleep(3)
+        time.sleep(self.spinBox_2.value())
         self.driver.find_element_by_xpath(self.lineEdit_5.text()).click()  #라인에디터5 이벤트참여버튼 클릭
-        time.sleep(3)
+        time.sleep(self.spinBox_2.value())
 
     def create_session(self):  # 세션 생성 
         discord_id=self.comboBox.currentText()
